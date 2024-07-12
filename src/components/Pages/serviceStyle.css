@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+#services-heading {
+  margin-top: 15%;
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+#services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust the gap as needed */
+  padding: 40px; /* Adjust padding as needed */
+}
+
+#services-card {
+  display: contents; /* This allows the grid items to be direct children of the grid container */
+}
+
+#card {
+  background-color: #f9f9f9;
+  outline: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 1s ease;
+}
+#card:hover {
+  transform: scale(0.9);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgb(15, 15, 36);
+  color:white
+}
+.card-img {
+  width: 20%;
+  height: auto;
+}
+#card h3 {
+  margin-top: 0;
+}
+
+#card p {
+  margin-bottom: 0;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: "Reddit Sans", sans-serif;   
+}

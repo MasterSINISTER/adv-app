@@ -1,0 +1,26 @@
+.btn-more{
+    font-size: 200%;
+    padding: 10px;
+    margin: 2%;
+    margin-left: 40%;
+    border-radius: 400px;
+    width: 200px;
+    border: none;
+    background: rgba(0, 0, 0, 0.905);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 13.5px );
+-webkit-backdrop-filter: blur( 13.5px );
+border: 1px solid rgba(0, 0, 0, 0.729);
+color: white;
+font-family: Poppins, sans-serif;
+transition: all 1s ease;
+}
+.home-footer{
+    margin-top: 10%;
+}
+.btn-more:hover{
+    transform: translateY(-10px);
+}
+section{
+    padding: 10px;
+}
