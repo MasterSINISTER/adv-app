@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 import Cards from "./Cards";
 import TypeIt from "typeit-react";
 import "./homeStyle.css";

@@ -20,11 +20,13 @@ a{
   transform: translateX(-450px);
 }
 .nav-sublink {
+  margin: 0 15px;
   letter-spacing: normal;
   cursor: pointer;
   height: fit-content;
   white-space: nowrap;
   padding: 10px;
+  color: white;
   font-weight: 400;
   transition: all 1s ease;
   font-size: 1.5rem;
@@ -34,7 +36,7 @@ a{
   font-weight: 500;
   transform: translateY(-10px);
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(244, 244, 244, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
@@ -44,8 +46,8 @@ a{
   letter-spacing: normal;
   cursor: pointer;
   height: fit-content;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 10px;
   white-space: nowrap;
   padding: 10px;
@@ -60,12 +62,73 @@ a{
   background: rgba(0, 0, 0, 0.988);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
+  color: white;
   -webkit-backdrop-filter: blur(4px);
   /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
 
-img {
-  width: 100%; /* Ensure the image covers the entire container */
-  height: auto; /* Maintain aspect ratio */
-  position: relative; /* Needed for z-index to work */
+/* img {
+  width: 100%;
+  height: auto;
+  position: relative; 
+  z-index: -1;
+  image-rendering: optimizeSpeed;
+} */
+
+/* src/navbarStyle.css */
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+}
+.btn-more-main{
+  font-size: 50%;
+  background-color: transparent;
+  border: white 2px solid;
+  color: white;
+  padding: 10px;
+  transition: all 1s ease;
+  margin-top: 10%;
+  border-radius: 20px;
+}
+.btn-more-main:hover{
+
+  background-color: white;
+  color: black;
+  transform: translateY(-10px);
+}
+.image-text {
+  position: absolute;
+  top: 40%;
+  letter-spacing: 3px;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 400%;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nav-sublink-contact {
+  margin: 0 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+
+.nav-sublink-contact {
+  margin-left: auto;
 }

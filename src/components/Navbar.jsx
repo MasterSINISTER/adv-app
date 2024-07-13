@@ -1,35 +1,44 @@
-import React from 'react'
-import TypeIt from "typeit-react";
-import {Link} from 'react-router-dom'
-import './navbarStyle.css'
-function Navbar() {
+// src/Navbar.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './navbarStyle.css';
+
+function NavBar() {
   return (
     <>
-      <img src='https://wallpapers.com/images/high/empty-lawyer-classroom-wte2m2f9zjywlt1c.webp'></img>
-        <div className="nav-links">
-          <Link to='/'><h3 className='nav-sublink' style={{marginLeft:'10%'}}>
-            Home
-          </h3>
-          </Link>
-          <Link to='/about'><h3 className='nav-sublink'>
-            About Us
-          </h3>
-          </Link>
-          <Link to='/services'><h3 className='nav-sublink'>
-            Our Services
-          </h3></Link>
-          
-          <h3 className='nav-sublink'>
-            Divorce Lawyer
-          </h3>
-          <Link to='/contact'><h3 className='nav-sublink-contact'>
-            Contact Us
-          </h3>
-          </Link>
+      <div className="image-container">
+        <img
+          src="https://imagetolink.com/ib/cqoHNW1ZFW.jpg"
+          alt="Background"
+          className="background-image"
+        />
+        <div className="image-text">
+          <span>RK GUPTA</span>
+          <br />
+          <span>ASSOCIATES</span>
+          <br></br>
+          <button className='btn-more-main'>Get Started</button>
         </div>
-    
+      </div>
+      <div className="nav-links" style={{ marginLeft: '10%' }}>
+        <Link to="/">
+          <h3 className="nav-sublink" >
+          Home 
+          </h3>
+        </Link>
+        <Link to="/about">
+          <h3 className="nav-sublink">About Us</h3>
+        </Link>
+        <Link to="/services">
+          <h3 className="nav-sublink">Our Services</h3>
+        </Link>
+        <h3 className="nav-sublink">Divorce Lawyer</h3>
+        <Link to="/contact">
+          <h3 className="nav-sublink-contact">Contact Us</h3>
+        </Link>
+      </div>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default NavBar;

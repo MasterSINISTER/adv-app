@@ -3,6 +3,8 @@ import "./contactStyle.css";
 import emailjs from "emailjs-com";
 import DynamicNav from "../DynamicNav";
 import Footer from "../Footer";
+import { Navbar } from "react-bootstrap";
+import NavBar from "../NavBar";
 
 function Contact() {
   const [formDetails, setFormDetails] = useState({
@@ -44,7 +46,7 @@ function Contact() {
 
   return (
     <>
-      <DynamicNav />
+    <DynamicNav/>
       <br></br>
       <br></br>
       <br></br>
