@@ -26,9 +26,6 @@ function Navbar() {
             Contact Us
           </h3>
           </Link>
-          <h1 className='title-header'>
-            Advocate RK Gupta
-          </h1>
         </div>
     
     </>
