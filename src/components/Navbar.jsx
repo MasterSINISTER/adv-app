@@ -17,7 +17,7 @@ function NavBar() {
           <br />
           <span>ASSOCIATES</span>
           <br></br>
-          <button className='btn-more-main'>Get Started</button>
+          <button className='btn-more-main'>Contact Us</button>
         </div>
       </div>
       <div className="nav-links" style={{ marginLeft: '10%' }}>

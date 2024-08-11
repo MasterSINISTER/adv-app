@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./NavBar";
 import Cards from "./Cards";
 import TypeIt from "typeit-react";
 import "./homeStyle.css";
@@ -23,7 +22,7 @@ function Home() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "20px",
-            justifyContent: "center",
+            marginLeft: "8%",
           }}
         >
           <Cards
