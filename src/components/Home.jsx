@@ -7,12 +7,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Footer";
 import CountUp from "react-countup";
-import { Navbar } from "react-bootstrap";
+import NavBar from "./Navbar";
 function Home() {
   AOS.init();
   return (
     <>
-    <Navbar/>
+   <NavBar/>
       <section className="home-expertise">
         <TypeIt>
           <h1 style={{ textAlign: "center", fontSize: "3rem" }}>EXPERTISE</h1>
