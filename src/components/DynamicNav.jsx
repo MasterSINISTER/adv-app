@@ -1,32 +1,32 @@
-import React from 'react'
-import './dynamicNavStyle.css'
-import {Link} from 'react-router-dom'
+// src/Navbar.js
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./navbarStyle.css";
+
 function DynamicNav() {
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    navigate("/about")
+  }
   return (
     <>
-         <div className="nav-links" style={{marginLeft:'10%'}}>
-         <Link to='/'> <h3 className='dynamic-nav-sublink' style={{marginLeft:'10%'}}>
-            Home
-          </h3>
-          </Link>
-          <Link to='/about'><h3 className='dynamic-nav-sublink'>
+      <div className="navbar-container">
+        <button className="btn-more">Book an Appoitment</button>
+
+        <ul className="navbar-list" data-aos="fade-down" data-aos-delay="300">
+          <li className="nav-links"  onClick={handleClick}>
             About Us
-          </h3>
-          </Link>
-          <Link to='/services'><h3 className='dynamic-nav-sublink'>
-            Our Services
-          </h3>
-          </Link>
-          <h3 className='dynamic-nav-sublink'>
-            Divorce Lawyer
-          </h3>
-          <Link to='/contact'><h3 className='dynamic-nav-sublink-contact'>
-            Contact Us
-          </h3>
-          </Link>
-          </div>
+          </li>
+          <li className="nav-links">
+            <Link to="/services">Our Services</Link>
+          </li>
+          <li className="nav-links">
+            Testimonials
+          </li>
+        </ul>
+      </div>
     </>
-  )
+  );
 }
 
-export default DynamicNav
+export default DynamicNav;

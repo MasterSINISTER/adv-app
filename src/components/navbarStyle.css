@@ -1,134 +1,191 @@
-.nav-links {
-  display: flex;
-  position: absolute;
-  top: 1%; /* Adjust as needed */
-  left: 5%; /* Adjust as needed */
-  gap: 6%;
-  padding: 10px;
+.navbar-container {
+  top: 30px; /* Align to the top of the container */
+  width: fit-content; /* Ensure the navbar spans the entire width */
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  margin-left: 10%;
+  position: fixed;
+  left: 12%;
   z-index: 999;
 }
-a{
-    text-decoration: none;
-    color: inherit;
-}
-.title-header {
-  white-space: nowrap;
-  margin-top: 25%;
-  font-size: 300%;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-transform: uppercase;
-  transform: translateX(-450px);
-}
-.nav-sublink {
-  margin: 0 15px;
-  letter-spacing: normal;
-  cursor: pointer;
-  height: fit-content;
-  white-space: nowrap;
-  padding: 10px;
-  color: white;
-  font-weight: 400;
-  transition: all 1s ease;
-  font-size: 1.5rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.nav-sublink:hover {
-  font-weight: 500;
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(244, 244, 244, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-}
-.nav-sublink-contact {
-  letter-spacing: normal;
-  cursor: pointer;
-  height: fit-content;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  white-space: nowrap;
-  padding: 10px;
-  font-weight: 400;
-  transition: all 1s ease;
-  font-size: 1.5rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.nav-sublink-contact:hover {
-  font-weight: 500;
-  transform: translateY(-10px);
-  background: rgba(0, 0, 0, 0.988);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  color: white;
-  -webkit-backdrop-filter: blur(4px);
-  /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+
+.top-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
 }
 
-/* img {
-  width: 100%;
-  height: auto;
-  position: relative; 
-  z-index: -1;
-  image-rendering: optimizeSpeed;
-} */
-
-/* src/navbarStyle.css */
-.image-container {
-  position: relative;
-  text-align: center;
-}
-
-.background-image {
-  width: 100%;
-  height: auto;
-}
-.btn-more-main{
-  font-size: 50%;
-  background-color: transparent;
-  border: white 2px solid;
-  color: white;
-  padding: 10px;
-  transition: all 1s ease;
-  margin-top: 10%;
-  border-radius: 20px;
-}
-.btn-more-main:hover{
-
-  background-color: white;
-  color: black;
-  transform: translateY(-10px);
-}
-.image-text {
-  position: absolute;
-  top: 40%;
-  letter-spacing: 3px;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 400%;
-  font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.navbar-list {
+  display: flex;
+  justify-content: center; /* Center the links */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 70px; /* Add space between links */
 }
 
 .nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Urbanist", sans-serif;
 }
 
-.nav-sublink-contact {
-  margin: 0 15px;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
+.nav-links a {
+  color: white;
+  font-weight: 600; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
+.nav-links a:hover {
+  color: rgb(0, 153, 255); /* Change color on hover */
+}
 
-.nav-sublink-contact {
-  margin-left: auto;
+.call-icon {
+  top: 5px;
+  height: 30%;
+  position: relative;
+  color: rgb(15, 163, 77);
+}
+
+.btn-app {
+  z-index: 999;
+  padding: 20px;
+  background-color: black;
+  border-radius: 100px;
+  font-size: 20px;
+  width: fit-content;
+  margin-right: 5%;
+  border: 1px solid white;
+  color: white;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+
+}
+
+.btn-app:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+
+.btn-text {
+  font-family: "Urbanist", sans-serif;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.img-logo {
+  width: 8%;
+  position: relative;
+  left: 30px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .navbar-container {
+    left: 5%;
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .navbar-list {
+    gap: 40px;
+  }
+
+  .nav-links {
+    font-size: 20px;
+  }
+
+  .btn-app {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+  }
+
+  .top-div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .btn-app {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+  }
+  .btn-text{
+    font-size: 15px;
+  }
+
+  .img-logo {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    padding: 5px;
+  }
+
+  .navbar-list {
+    gap: 15px;
+  }
+
+  .nav-links {
+    font-size: 16px;
+  }
+
+  .btn-app {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .img-logo{
+    display: none;
+  }
+  .btn-text{
+    position: relative;
+    top: -10%;
+  }
+  .call-icon{
+    display: none;
+  }
 }

@@ -1,0 +1,89 @@
+/*
+	jsrepo 1.29.1
+	Installed from https://reactbits.dev/default/
+	1-2-2025
+*/
+
+.gallery-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-gradient {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  z-index: 10;
+}
+
+.gallery-gradient-left {
+  left: 0;
+
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #060606 100%);
+}
+
+.gallery-gradient-right {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #060606 100%);
+}
+
+.gallery-content {
+  display: flex;
+  height: 100%;;
+
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.gallery-track {
+  display: flex;
+  height: auto;
+  gap: 30px;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  transform-style: preserve-3d;
+  width: 200%;
+}
+
+.gallery-item {
+  position: absolute;
+  display: flex;
+  gap: 30px;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  backface-visibility: hidden;
+}
+
+.gallery-img {
+  pointer-events: none;
+  height: auto;
+  width: 60%;
+  border-radius: 15px;
+  border: 3px solid #fff;
+  object-fit: cover;
+  margin: 30%;
+  transition: 0.3s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    padding: 6%;
+  }
+  .gallery-img {
+    height: 100px;
+    width: 220px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Base directory for module resolution
+    "paths": {
+      "@components/*": ["src/components/*"] // Example alias (adjust as needed)
+    },
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

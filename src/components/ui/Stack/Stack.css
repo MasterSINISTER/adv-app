@@ -1,0 +1,38 @@
+/*
+	jsrepo 1.29.1
+	Installed from https://reactbits.dev/default/
+	1-2-2025
+*/
+
+.stack-container {
+  position: relative;
+  perspective: 600px;
+  display: block;
+  margin-left: 37%;
+  /* margin-top: 15%; */
+  margin-bottom: 10%;
+  
+}
+
+.card-rotate {
+  position: absolute;
+  
+  cursor: grab;
+
+}
+
+.card {
+  border-radius: 20px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.card-image {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
