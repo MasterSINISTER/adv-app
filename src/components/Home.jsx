@@ -101,13 +101,13 @@ function Home() {
           <div className="para-container">
           <div className="img-container">
             <img
-               src="https://i.postimg.cc/vHcQ8Ggn/lawyer.webp"
+               src="https://i.postimg.cc/266fhMyY/2330082.webp"
                alt="lawyerImage"
                className="lawyer-img"
-             />
+               />
              
              <img
-               src="https://i.postimg.cc/VNc1FM79/10865028.png"
+               src="https://i.postimg.cc/pdkH9R2k/4538053.webp"
                alt="lawyerImage"
                className="person-img"
              />
