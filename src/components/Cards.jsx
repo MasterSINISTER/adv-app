@@ -5,7 +5,7 @@ function Cards(props) {
   return (
     <>
       <div class="card">
-        <img src={props.imgsrc} style={{ width: "40%",padding:'10px' }}></img>
+        <img src={props.imgsrc} style={{ width: "40%",padding:'10px' }} alt="illustration-img"></img>
         <div>
           <h3 style={{marginLeft:'7%',color:'whitesmoke'}}>{props.title}</h3>
         </div>

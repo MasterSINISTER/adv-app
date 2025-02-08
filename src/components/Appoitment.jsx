@@ -1,10 +1,9 @@
-import React from "react";
+import React,{ useState, useEffect } from "react";
 import "./Appointment.css";
 import Footer from "./Footer";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useNavigate } from "react-router-dom";
-
 function Appoitment() {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -13,12 +12,29 @@ function Appoitment() {
   const handleWhatsAppClick = () => {
     window.open("https://api.whatsapp.com/send?phone=919826614675");
   };
+    
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate page load completion
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Adjust time as needed
+
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+
   return (
     <>
+      {loading && (
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+      )}
       <ArrowBackIosIcon
+        sx={{ color: "white", padding: "30px", fontSize: "50px" }}
         onClick={handleClick}
-        sx={{ color: "white", padding: "30px", fontSize: "50px",cursor:"pointer" }}
-      />
+      ></ArrowBackIosIcon>
       <h1 className="appoitment-heading">BOOK A MEET !</h1>
       <div className="form-container">
         <form className="form" action="https://formsubmit.co/hellolucifer007@gmail.com" method="POST">
@@ -30,7 +46,7 @@ function Appoitment() {
           </label>
 
           <label>
-            <input className="input" type="number" placeholder="" required="" name="phone"/>
+            <input className="input" type="tel" placeholder="" required="" name="phone"/>
             <span>Phone Number</span>
           </label>
           <label>
@@ -50,8 +66,8 @@ function Appoitment() {
         </form>
       </div>
 
-      <div className="reachout-container">
-        <h1 className="heading">Reach out to us !</h1>
+      <div className="reachout-container" data-aos="fade-up" data-aos-delay="300">
+        <h1 className="appoitment-heading">Reach out to us !</h1>
         <div className="reachout-content">
         <h3 className="contact-details">
           <button onClick={handleWhatsAppClick} type="button" className="btn-whatsapp">

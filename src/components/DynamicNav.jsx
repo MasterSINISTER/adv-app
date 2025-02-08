@@ -8,20 +8,22 @@ function DynamicNav() {
   const handleClick=()=>{
     navigate("/about")
   }
+  const handleHome=()=>{
+    navigate("/")
+  }
   return (
     <>
       <div className="navbar-container">
-        <button className="btn-more">Book an Appoitment</button>
 
         <ul className="navbar-list" data-aos="fade-down" data-aos-delay="300">
-          <li className="nav-links"  onClick={handleClick}>
-            About Us
+          <li className="nav-links"  onClick={handleHome}>
+            Home
           </li>
           <li className="nav-links">
-            <Link to="/services">Our Services</Link>
+            <Link onClick={handleClick}>About US</Link>
           </li>
           <li className="nav-links">
-            Testimonials
+            <Link onClick={handleClick}></Link>
           </li>
         </ul>
       </div>

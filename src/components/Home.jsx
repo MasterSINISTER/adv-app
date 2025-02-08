@@ -150,6 +150,8 @@ Legal assistance at the right time can protect your rights, prevent complication
         </div> */}
         <div
           className="cards-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           <TiltedCard
             imageSrc="https://www.shutterstock.com/image-vector/legal-advice-lawyer-during-divorce-600nw-2491887577.jpg"

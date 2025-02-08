@@ -3,7 +3,6 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import "./aboutStyle.css";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
-import Cards from "../Cards";
 import NewCard from "../NewCard";
 
 function About() {
