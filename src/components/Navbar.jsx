@@ -3,7 +3,7 @@ import React,{useEffect}from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./navbarStyle.css";
 import { Call } from "@mui/icons-material";
-function NavBar() {
+function Navbar() {
   const navigate=useNavigate();
   const handleServicesScroll = () => {
     const percentage = 100; // Change this to the desired percentage
@@ -98,4 +98,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Navbar;

@@ -4,10 +4,11 @@ import BlurText from "./ui/BlurText/BlurText";
 import Stack from "./ui/Stack/Stack";
 import Footer from "./Footer";
 import TiltedCard from "./ui/TiltedCard/TiltedCard";
-import NavBar from "./NavBar";
+
 import RotatingText from "./ui/RotatingText/RotatingText";
 import Aurora from "./ui/Aurora/Aurora";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./NavBar";
 function Home() {
   const navigate=useNavigate();
   const getToStart = () => {
@@ -37,7 +38,7 @@ function Home() {
     <>
       <div className="top-container">
       
-      <NavBar/>
+      <Navbar/>
         <div className="video-container">
         <Aurora
   colorStops={["#00D8FF", "#00D8FF", "#00D8FF"]}

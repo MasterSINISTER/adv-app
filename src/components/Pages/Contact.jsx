@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./contactStyle.css";
 import emailjs from "emailjs-com";
-import DynamicNav from "../DynamicNav";
-import Footer from "../Footer";
 
 
 function Contact() {
