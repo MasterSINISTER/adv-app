@@ -1,8 +1,5 @@
 import React from "react";
-
-
 import "./homeStyle.css";
-
 import BlurText from "./ui/BlurText/BlurText";
 import Stack from "./ui/Stack/Stack";
 import Footer from "./Footer";
