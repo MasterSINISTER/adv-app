@@ -8,7 +8,7 @@ import TiltedCard from "./ui/TiltedCard/TiltedCard";
 import RotatingText from "./ui/RotatingText/RotatingText";
 import Aurora from "./ui/Aurora/Aurora";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./NavBar";
+import Nav from "./Nav";
 function Home() {
   const navigate=useNavigate();
   const getToStart = () => {
@@ -38,7 +38,7 @@ function Home() {
     <>
       <div className="top-container">
       
-      <Navbar/>
+ <Nav/>
         <div className="video-container">
         <Aurora
   colorStops={["#00D8FF", "#00D8FF", "#00D8FF"]}
