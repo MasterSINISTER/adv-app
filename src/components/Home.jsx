@@ -1,39 +1,111 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./homeStyle.css";
+
 import BlurText from "./ui/BlurText/BlurText";
 import Stack from "./ui/Stack/Stack";
 import Footer from "./Footer";
 import TiltedCard from "./ui/TiltedCard/TiltedCard";
-
 import RotatingText from "./ui/RotatingText/RotatingText";
 import Aurora from "./ui/Aurora/Aurora";
 import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
+import { gsap } from "gsap";
+    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 function Home() {
+  
+gsap.registerPlugin(ScrollTrigger);
   const navigate=useNavigate();
   const getToStart = () => {
     navigate("/contact");
   }
-  
+ 
   const images = [
     {
       id: 1,
-      img: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format",
+      img: "https://i.postimg.cc/K8wyNpyG/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
     },
     {
       id: 2,
-      img: "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format",
+      img: "https://i.postimg.cc/XqjMJT98/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
     },
     {
       id: 3,
-      img: "https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format",
+      img: "https://i.postimg.cc/jqc09Srk/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
     },
     {
       id: 4,
-      img: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format",
+      img: "https://i.postimg.cc/8cP3DLVX/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
     },
   ];
 
+  
+  
+  gsap.to(".lawyer-img",{
+    scrollTrigger:{
+      trigger:".lawyer-img",
+      toggleActions:"play pause reverse none",
+      scrub:1,
+      // scroller:".img-container",
+      start:"top center",
+      // markers:true,
+      },
+    x:300,
+    duration:2,
+    ease:"none",
+
+  });
+  gsap.to(".person-img",{
+    scrollTrigger:{
+      trigger:".person-img",
+      toggleActions:"play pause reverse reset",
+      scrub:1,
+      start:"center 80%",
+      end:"+=500",
+      id:"person-img",
+      // markers:true,
+      },
+    translateX:-300,
+    duration:2,
+    // ease:"none",
+
+  });
+
+
+  gsap.utils.toArray(".firstSection-heading").forEach((heading) => {
+    gsap.to(heading, {
+      scrollTrigger: {
+        trigger: heading,
+        toggleActions: "play pause reverse reset",
+        start:"center 80%",
+        // markers: true,
+        scrub: 1,
+      },
+      scale: 1.1,
+      // translateX: -100,
+      opacity: 1,
+      duration: 2,
+    });
+  });
+  gsap.to(".secondSection-heading", {
+    scrollTrigger: {
+      trigger: ".secondSection-heading",
+      toggleActions: "play pause reverse reset",
+      start:"center 80%",
+      markers: true,
+      scrub: 3,
+    },
+    scale: 1.15,
+    // translateX: -100,
+    delay: 1,
+    opacity: 1,
+    duration: 2,
+  })
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, []);
   return (
     <>
       <div className="top-container">
@@ -64,7 +136,7 @@ function Home() {
                 direction="top"
                 className="heading-sub"
               />
-
+          
              <div style={{display:"flex",flexDirection:"row"}} className="switcher-div" >
              <h1 className="sub-heading" >We Help You with </h1>
              <RotatingText
@@ -88,28 +160,33 @@ function Home() {
           </div>
         </div>
       </div>
+
       <section className="about-us">
-      <h1 className="firstSection-heading">
+    
+        <h1 className="firstSection-heading">
             Legal Assistance at Right Time
           </h1>
+      
         <div
           className="firstSection-container"
         >
-         
+
           <div className="para-container">
-          <div className="img-container">
-            <img
-               src="https://i.postimg.cc/266fhMyY/2330082.webp"
-               alt="lawyerImage"
-               className="lawyer-img"
-               />
-             
-             <img
-               src="https://i.postimg.cc/pdkH9R2k/4538053.webp"
-               alt="lawyerImage"
-               className="person-img"
-             />
-            </div>
+          <div
+     className="img-container"
+>
+  <img
+    src="https://i.postimg.cc/266fhMyY/2330082.webp"
+    alt="lawyerImage"
+    className="lawyer-img"
+  />
+
+  <img
+    src="https://i.postimg.cc/pdkH9R2k/4538053.webp"
+    alt="lawyerImage"
+    className="person-img"
+  />
+</div>
             <p className="para-style">
               {/* Advocate R. K. Gupta has been practicing and handling cases
               independently with a result oriented approach, both professionally
@@ -136,7 +213,7 @@ Legal assistance at the right time can protect your rights, prevent complication
               <br></br>
               <br></br>
               <br></br>
-              <button className="btn-read">Read More</button>
+              <button className="btn-read" onClick={()=>navigate("/about")}>Read More</button>
             </p>
           
           </div>
