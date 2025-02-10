@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect,useState} from "react";
 import "./homeStyle.css";
 
 import BlurText from "./ui/BlurText/BlurText";
@@ -12,7 +12,7 @@ import Nav from "./Nav";
 import { gsap } from "gsap";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import CountUp from "react-countup";
 
 function Home() {
   
@@ -41,73 +41,95 @@ gsap.registerPlugin(ScrollTrigger);
     },
   ];
 
-  
-  
-  gsap.to(".lawyer-img",{
-    scrollTrigger:{
-      trigger:".lawyer-img",
-      toggleActions:"play pause reverse none",
-      scrub:1,
-      // scroller:".img-container",
-      start:"top center",
-      // markers:true,
-      },
-    x:300,
-    duration:2,
-    ease:"none",
-
-  });
-  gsap.to(".person-img",{
-    scrollTrigger:{
-      trigger:".person-img",
-      toggleActions:"play pause reverse reset",
-      scrub:1,
-      start:"center 80%",
-      end:"+=500",
-      id:"person-img",
-      // markers:true,
-      },
-    translateX:-300,
-    duration:2,
-    // ease:"none",
-
-  });
-
-
-  gsap.utils.toArray(".firstSection-heading").forEach((heading) => {
-    gsap.to(heading, {
-      scrollTrigger: {
-        trigger: heading,
-        toggleActions: "play pause reverse reset",
-        start:"center 80%",
-        // markers: true,
-        scrub: 1,
-      },
-      scale: 1.1,
-      // translateX: -100,
-      opacity: 1,
-      duration: 2,
-    });
-  });
-  gsap.to(".secondSection-heading", {
-    scrollTrigger: {
-      trigger: ".secondSection-heading",
-      toggleActions: "play pause reverse reset",
-      start:"center 80%",
-      markers: true,
-      scrub: 3,
-    },
-    scale: 1.15,
-    // translateX: -100,
-    delay: 1,
-    opacity: 1,
-    duration: 2,
-  })
   useEffect(() => {
-    ScrollTrigger.refresh();
+    gsap.to(".lawyer-img",{
+      scrollTrigger:{
+        trigger:".lawyer-img",
+        toggleActions:"play pause resume restart",
+        scrub:1,
+        // markers:true,
+        },
+      x:300,
+      duration:2,
+  
+    });
+    gsap.to(".person-img",{
+      scrollTrigger:{
+        trigger:".person-img",
+        toggleActions:"play pause resume restart",
+        scrub:1,
+        },
+      translateX:-300,
+      duration:2,
+      // ease:"none",
+  
+    });
+    gsap.utils.toArray(".firstSection-heading").forEach((heading) => {
+      gsap.to(heading, {
+        scrollTrigger: {
+          trigger: heading,
+          toggleActions: "play pause resume stop",
+          // start:"center 80%",
+          scrollers: ".firstSection-heading",
+          scrub: 1,
+        },
+        scale: 1.1,
+        y: -100,
+        opacity: 1,
+        duration: 2,
+      });
+    });
+    gsap.to(".secondSection-heading", {
+      scrollTrigger: {
+        trigger: ".secondSection-heading",
+        toggleActions: "play pause reverse stop",
+        scrollers: ".stack-container",
+        scrub: 2,
+      },
+      scale: 1.15,
+      // translateX: -100,
+      delay: 1,
+      opacity: 1,
+      color: "grey",
+      duration: 2,
+    })
+
+    gsap.to(".para-style",{
+      scrollTrigger:{
+        trigger:".para-style",
+        toggleActions:"play pause resume restart",
+        scrub:1,
+        },
+      opacity:1,
+      duration:2,
+    })
   }, []);
+
+  const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem("Accepted") !== "true") {
+      document.body.style.overflow = "hidden";
+      setShowModal(true);
+    }
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem("Accepted", "true");
+    document.body.style.overflow = "auto";
+    setShowModal(false);
+  };
   return (
     <>
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <h2>Disclaimer</h2>
+            <p>As per the rules of the Bar Council of India, we are not permitted to solicit work and advertise. By visiting the website, the user acknowledges that the information provided on this website is solely available for informational purposes only sought to be voluntarily gained by him/her and is neither soliciting nor advertisement. Further, the information provided on this website is accessed by the user’s own volition, and any transmission, receipt or use of this information available on this website does not create any liability or any relationship with us.</p>
+            <button onClick={handleAccept} className="btn-accept">Accept</button>
+          </div>
+        </div>
+      )}
+
       <div className="top-container">
       
  <Nav/>
@@ -130,7 +152,7 @@ gsap.registerPlugin(ScrollTrigger);
                 className="heading"
               />
               <BlurText
-                text="AND ASSOCIATES"
+                text="& ASSOCIATES"
                 delay={300}
                 animateBy="letter"
                 direction="top"
@@ -213,7 +235,6 @@ Legal assistance at the right time can protect your rights, prevent complication
               <br></br>
               <br></br>
               <br></br>
-              <button className="btn-read" onClick={()=>navigate("/about")}>Read More</button>
             </p>
           
           </div>
@@ -397,7 +418,7 @@ Legal assistance at the right time can protect your rights, prevent complication
           <br />
           <br />
           <br />
-          <div className="stack-container">
+          <div className="stack-container" data-aos="fade-in">
           <Stack
             randomRotation={true}
             sensitivity={180}
@@ -405,6 +426,63 @@ Legal assistance at the right time can protect your rights, prevent complication
             cardDimensions={{ width: 200, height: 200 }}
             cardsData={images}
           />
+          </div>
+          <div className="stats-container">
+            <div>
+            <CountUp
+              to={4025}
+              start={0}
+              end={4025}
+              duration={5}
+              separator=","
+              startWhen={true}
+            />
+            <br>
+            </br>
+            <label>Successful Cases</label>
+            </div>
+            
+            <div>
+            <CountUp
+              to={3270}
+              start={0}
+              end={3270}
+              duration={5}
+              separator=","
+              startWhen={true}
+            />
+            <br>
+            </br>
+            <label>Trusted Clients</label>
+            </div>
+            <div>
+            <CountUp
+              to={6349}
+              start={0}
+              end={6349}
+              duration={5}
+              separator=","
+              startWhen={true}
+            />
+            <br>
+            </br>
+            <label>Case Studies</label>
+            </div>
+            <div>
+            <CountUp
+              to={851}
+              start={0}
+              end={851}
+              duration={5}
+              separator=","
+              startWhen={true}
+            />
+            <br>
+            </br>
+            <label>Registered Case</label>
+            </div>
+            
+            
           </div>
          
         </div>

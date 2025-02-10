@@ -44,7 +44,7 @@ function CardRotate({ children, onSendToBack, sensitivity }) {
 export default function Stack({
   randomRotation = false,
   sensitivity = 200,
-  cardDimensions = { width: 308, height: 308 },
+  cardDimensions = { width: 348, height: 348 },
   cardsData = [],
   animationConfig = { stiffness: 260, damping: 20 },
   sendToBackOnClick = false,
@@ -107,7 +107,7 @@ export default function Stack({
               onClick={() => sendToBackOnClick && sendToBack(card.id)}
               animate={{
                 rotateZ: (cards.length - index - 1) * 4 + randomRotate,
-                scale: 1 + index * 0.06 - cards.length * 0.06,
+                scale: 1.2 + index * 0.06 - cards.length * 0.06,
                 transformOrigin: "90% 90%",
               }}
               initial={false}

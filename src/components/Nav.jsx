@@ -84,6 +84,11 @@ function Nav() {
               Testimonials
             </Link>
           </li>
+          <li className="nav-links">
+            <Link to="/coming-soon">
+              About US
+            </Link>
+          </li>
         </ul>  
       </div>
     <button className="btn-app" onClick={handleAppointment}>

@@ -5,6 +5,7 @@ import About from './components/Pages/About';
 import Services from './components/Pages/Services';
 import Appoitment from './components/Appoitment';
 import ThankYou from './components/ThankYou';
+import ComingSoon from './components/ComingSoon';
 
 
 
@@ -18,6 +19,7 @@ function App() {
             <Route path='/services' element={<Services/>}/>
             <Route path='/contact' element={<Appoitment/>}/>
             <Route path='/thank-you' element={<ThankYou/>}/>
+            <Route path='/coming-soon' element={<ComingSoon/>}/>
           </Routes>
         </Router>
         

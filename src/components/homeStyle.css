@@ -24,14 +24,15 @@ border: 1px solid rgba(0, 204, 255, 0.18);
 }
 .btn-read{
   font-size: 30px;
-  padding: 18px;
+  width: fit-content;
+  padding: 20px;
   font-family: "Urbanist", sans-serif;
   border-radius: 100px;
   font-weight: 600;
   transition: all 0.7s ease;
   border: none;
   background-color: transparent;
-  border: 1px solid #00D8FF;
+  border: 5px solid #00D8FF;
   color: #EEEEEE;
 }
 .image-background{
@@ -46,9 +47,9 @@ border: 1px solid rgba(0, 204, 255, 0.18);
 .btn-read:hover {
   cursor: pointer;
   background-color: transparent;
-  border-bottom: 1px solid white;
+  border-bottom: 5px solid #00D8FF;
   color: #EEEEEE;
-  transform: translateY(-40%);
+  transform: translateY(-20%);
 }
 .video-background {
   position: absolute;
@@ -159,9 +160,59 @@ border: 1px solid rgba(0, 204, 255, 0.18);
 .custom-spotlight-card :hover {
   transform: scale(1.2);
 }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 
+.modal-content {
+  background: rgb(0, 0, 0);
+ width: 50%;
+ padding: 50px;
+ font-size: 25px;
+ font-family: "Urbanist", sans-serif;
+ height: 50%;
+  border-radius: 5px;
+  text-align: center;
+  background: rgba( 0, 0, 0, 0.55 );
+box-shadow: 0 8px 32px 0 rgba(0, 225, 255, 0.37);
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 30px;
+word-spacing: 2px;
+letter-spacing: 2px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.btn-accept{
+  font-size: 30px;
+  padding: 10px;
+  font-family: "Urbanist", sans-serif;
+  border-radius: 100px;
+  font-weight: 600;
+  transition: all 0.7s ease;
+  border: none;
+  background-color: transparent;
+  border: 4px solid #00D8FF;
+  color: #EEEEEE;
+  width: 50%;
+  cursor: pointer;
+}
+.btn-accept:hover{
+  background-color: transparent;
+  border-bottom: 4px solid #00D8FF;
+  color: #EEEEEE;
+  transform: translateY(-10%);
+}
 .para-style {
-  font-size: 21px;
+  font-size: 30px;
   font-family: "Urbanist", sans-serif;
   padding-left: 3%;
   padding-right: 3%;
@@ -172,9 +223,24 @@ border: 1px solid rgba(0, 204, 255, 0.18);
   padding-top: 5%;
   text-align: center;
   letter-spacing: 1px;
-  animation: fadeIn;
-  animation-timeline: view();
+  opacity: 0;
    word-spacing: 2px;
+}
+.stats-container{
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  padding-top: 10%;
+  flex-direction: row;
+  gap: 10%;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 800;
+}
+.stats-container label{
+  color: #00D8FF;
+  padding-top: 10%;
 }
 @supports (animation-timeline: view()){
   .lawyer-img{
@@ -239,9 +305,7 @@ border-radius: 10px;
     margin-top: 5%;
     border: none;
     background-color: transparent;
-    animation: fadeOut;
-    animation-timeline: view();
-    border: 1px solid #00D8FF;
+    border: 4px solid #00D8FF;
     color: #EEEEEE;
   }
 }
@@ -249,7 +313,7 @@ border-radius: 10px;
 .btn-explore:hover {
   cursor: pointer;
   background-color: transparent;
-  border-bottom: 1px solid rgb(0, 238, 255);
+  border-bottom: 5px solid rgb(0, 238, 255);
   color: #EEEEEE;
   transform: translateY(-10%);
 }
@@ -276,8 +340,6 @@ border-radius: 10px;
     padding: 10px;
     border-radius: 30px;
     transition: all 1s ease;
-    animation: fadeOut;
-    animation-timeline: view();
   }
 }
 
@@ -299,15 +361,14 @@ opacity: 0.5;
     padding: 20px;
     gap: 5%;
     margin-top: 5%;
-    animation: fadeUp;
-    animation-timeline: view();
     
   }
 }
 
 .stack-container{
   position: relative;
-  right: 15%;
+  right: 13%;
+  padding-top: 5%;
 }
 .our-services{
   padding-top: 10%;
@@ -327,10 +388,10 @@ opacity: 0.5;
   .secondSection-heading{
     font-size: 40px;
     text-align: center;
+    padding: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: "Lexend Giga", sans-serif;
-    color: rgba(87, 84, 84, 0.493);
     /* animation: scaleIn;
     animation-timeline: view(); */
   }

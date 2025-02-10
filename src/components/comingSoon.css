@@ -1,0 +1,10 @@
+.coming-background{
+    background: url("https://cdn.dribbble.com/users/1761902/screenshots/8527483/static-res-coming-soon-dribble.gif");
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}

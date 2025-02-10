@@ -85,6 +85,9 @@
   font-weight: 600;
   font-size: 25px;
 }
+.btn-text:hover{
+cursor: pointer;
+}
 
 .img-logo {
   width: 8%;
