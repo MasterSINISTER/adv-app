@@ -46,7 +46,7 @@ gsap.registerPlugin(ScrollTrigger);
       scrollTrigger:{
         trigger:".lawyer-img",
         toggleActions:"play pause resume restart",
-        scrub:1,
+        scrub:3,
         // markers:true,
         },
       x:300,
@@ -57,7 +57,7 @@ gsap.registerPlugin(ScrollTrigger);
       scrollTrigger:{
         trigger:".person-img",
         toggleActions:"play pause resume restart",
-        scrub:1,
+        scrub:3,
         },
       translateX:-300,
       duration:2,

@@ -1,10 +1,18 @@
 .coming-background{
-    background: url("https://cdn.dribbble.com/users/1761902/screenshots/8527483/static-res-coming-soon-dribble.gif");
+    background: url("https://i3.wp.com/media0.giphy.com/avatars/_canastasia_/8poNkRcUKw0y.gif");
     display: grid;
-    align-items: center;
-    justify-items: center;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 20%;
     background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
+}
+@media screen and (max-width: 480px) {
+    .coming-background{
+        background: url("https://i3.wp.com/media0.giphy.com/avatars/_canastasia_/8poNkRcUKw0y.gif");
+        background-size: 50%;
+        background-repeat: no-repeat;
+        margin-top: 50%;
+    }
 }

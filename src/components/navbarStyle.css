@@ -9,10 +9,10 @@
   border-radius: 10px;
   margin-left: 10%;
   position: fixed;
-  left: 12%;
+  left: 8%;
   z-index: 999;
+  transition: all 1s ease;
 }
-
 .top-div {
   display: flex;
   flex-direction: row;
@@ -69,6 +69,7 @@
   color: white;
   transition: all 1s ease-in-out;
   overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
 
 }
 

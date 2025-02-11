@@ -4,6 +4,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   font-family: "Lexend Giga", sans-serif;
+  overflow-x: auto;
 }
 
 /* From Uiverse.io by ammarsaa */
@@ -307,32 +308,48 @@ textarea {
 /* For mobile devices */
 @media (max-width: 480px) {
   .appoitment-heading {
-      font-size: 30px;
+      font-size: 25px;
+      position: relative;
+      right: 10%;
+      word-wrap: break-word;
   }
 
   .form {
-      width: 90%;
+      width: 60%;
       margin-left: 5%;
       padding: 20px;
   }
 
   .title {
       font-size: 24px;
+      word-wrap: break-word;
+      white-space: normal;
   }
 
   .contact-details {
       font-size: 20px;
   }
+  .form label .input {
+  width: fit-content;
+}
 
-  .btn-whatsapp {
+.btn-whatsapp {
       font-size: 18px;
       padding: 10px;
-      top: 5vh;
+      top: 1vh;
       left: 2vh;
   }
-
+textarea{
+  width: 40%;
+}
   .submit {
       width: 70%;
       left: 15%;
+  }
+  .map-container{
+    width:80%;
+    height: auto;
+    position: relative;
+    left: 10px;
   }
 }

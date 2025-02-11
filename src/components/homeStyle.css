@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   background-color: black;
+  overflow-wrap: anywhere;
 }
 .video-container {
   /* position: relative; */
@@ -366,9 +367,8 @@ opacity: 0.5;
 }
 
 .stack-container{
-  position: relative;
-  right: 13%;
-  padding-top: 5%;
+ position: relative;
+ right: 5%;
 }
 .our-services{
   padding-top: 10%;
@@ -618,6 +618,13 @@ opacity: 0.5;
   .top-div{
     height: fit-content;
   }
+  .person-img{
+    display: none;
+
+  }
+  .lawyer-img{
+    display: none;
+  }
 
   .navbar-list {
     gap: 15px;
@@ -633,15 +640,21 @@ opacity: 0.5;
 
   .firstSection-heading {
     font-size: 24px;
+    padding-top:20% ;
     color: #00D8FF;
   }
   .secondSection-heading{
     font-size: 20px;
   }
-
+.stats-container{
+  padding-top: 50%;
+  word-wrap: break-word;
+  font-size: 1.1em;
+}
 .stack-container{
   position: relative;
   right: 40%;
+
 
 }
 .para-style{
