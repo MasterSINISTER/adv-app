@@ -192,4 +192,15 @@ cursor: pointer;
   .call-icon{
     display: none;
   }
+  .modal-content{
+    font-size: 2vh;
+    width: fit-content;
+  }
+  .modal{
+    width: 50%;
+    padding: 10px;
+  }
+  .btn-accept{
+    font-size: 2vh;
+  }
 }

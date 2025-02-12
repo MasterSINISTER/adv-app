@@ -1,5 +1,5 @@
 {
-  "$schema": "https://unpkg.com/jsrepo@1.29.1/schemas/project-config.json",
+  "$schema": "https://unpkg.com/jsrepo@1.35.1/schemas/project-config.json",
   "repos": [
     "https://reactbits.dev/default",
     "https://reactbits.dev/tailwind",
@@ -8,8 +8,9 @@
   "includeTests": false,
   "watermark": true,
   "formatter": "prettier",
+  "configFiles": {},
   "paths": {
-    "*": "ui",
+    "*": "./src/components/ui/",
     "Animations": "ui",
     "Backgrounds": "ui",
     "Components": "ui",

@@ -13,7 +13,8 @@ import { gsap } from "gsap";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CountUp from "react-countup";
-
+import { Card } from "react-bootstrap";
+import { Rating } from "@mui/material";
 function Home() {
   
 gsap.registerPlugin(ScrollTrigger);
@@ -413,12 +414,43 @@ Legal assistance at the right time can protect your rights, prevent complication
       >
         <h1 className="firstSection-heading">Testimonials</h1>
         <div style={{ marginTop: "10%" }}>
-          <h1 className="secondSection-heading">Shuffle to See !</h1>
-          <br />
-          <br />
-          <br />
-          <br />
-          <div className="stack-container" data-aos="fade-in">
+          <div className="tes-cards-container" data-aos="slide-right" delay={1000}>
+            <div className="tes-card">
+              <img src="https://assets-v2.lottiefiles.com/a/72d1e8f4-1169-11ee-be4e-f75a6faac104/K5i1Cfk8j5.gif" alt="" className="img-avatar"/>
+            <br></br>
+            <br></br>
+<Rating name="size-small" defaultValue={5}  readOnly size="Medium" sx={{ color: "white" }}/>
+              <h2 className="tes-heading">
+              Akanksha
+              </h2>
+              <h3 className="tes-content">
+              Consultation was nice. I am satisfied with it.              </h3>
+              </div>
+              <div className="tes-card">
+              <img src="https://assets-v2.lottiefiles.com/a/82411e66-1184-11ee-8cfa-d707e53cae38/bccvxj7Ogv.gif" alt="" />
+              <br></br>
+            <br></br>
+<Rating name="size-small" defaultValue={5}  readOnly size="Medium" sx={{ color: "white" }}/>
+              <h2 className="tes-heading">
+              Nitin
+              </h2>
+              <h3 className="tes-content">
+              The advise provided by advocate was very helpful.</h3>
+              </div>
+              <div className="tes-card">
+              
+              <img src="https://cdn.dribbble.com/users/456158/screenshots/6305721/care-bot.gif" alt="" />
+              <br></br>
+            <br></br>
+<Rating name="size-small" defaultValue={5} readOnly size="Medium" sx={{ color: "white" }}/>
+              <h2 className="tes-heading">
+              Anindita 
+              </h2>
+              <h3 className="tes-content">
+              Thanks for recommending Advocate Gupta. A genuine expert, with impressive knowledge and experience. He helped us solve our problem in a warm and unassuming manner.              </h3>
+              </div>
+          </div>
+          {/* <div className="stack-container" data-aos="fade-in">
           <Stack
             randomRotation={true}
             sensitivity={180}
@@ -426,14 +458,15 @@ Legal assistance at the right time can protect your rights, prevent complication
             cardDimensions={{ width: 200, height: 200 }}
             cardsData={images}
           />
-          </div>
-          <div className="stats-container">
+         
+          </div> */}
+          <div className="stats-container" data-aos="fade-in">
             <div>
             <CountUp
               to={4025}
               start={0}
               end={4025}
-              duration={5}
+              duration={40}
               separator=","
               startWhen={true}
             />
@@ -447,7 +480,7 @@ Legal assistance at the right time can protect your rights, prevent complication
               to={3270}
               start={0}
               end={3270}
-              duration={5}
+              duration={40}
               separator=","
               startWhen={true}
             />
@@ -460,7 +493,7 @@ Legal assistance at the right time can protect your rights, prevent complication
               to={6349}
               start={0}
               end={6349}
-              duration={5}
+              duration={40}
               separator=","
               startWhen={true}
             />
@@ -473,7 +506,7 @@ Legal assistance at the right time can protect your rights, prevent complication
               to={851}
               start={0}
               end={851}
-              duration={5}
+              duration={40}
               separator=","
               startWhen={true}
             />
