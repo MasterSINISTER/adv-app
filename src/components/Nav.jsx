@@ -51,6 +51,7 @@ function Nav() {
         if (navbarContainer) {
             const { scrollY } = window;
             const scale = Math.max(0.9, 1 - scrollY * 0.001);
+            navbarContainer.style.backdropFilter = `blur(${scale * 10}px)`;
             navbarContainer.style.transform = `scale(${scale})`;
         }
     }

@@ -185,10 +185,7 @@ cursor: pointer;
   .img-logo{
     display: none;
   }
-  .btn-text{
-    position: relative;
-    top: -10%;
-  }
+
   .call-icon{
     display: none;
   }

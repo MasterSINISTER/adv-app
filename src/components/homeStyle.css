@@ -709,14 +709,19 @@ opacity: 0.5;
   width: fit-content;
   position: relative;
   z-index: 9999;
+  padding: 20px;
+  left: 3%;
+  backdrop-filter: blur( 7.5px );
 }
 .modal{
   margin-left: 2%;
   width: 90%;
-  height: fit-content;
+  position: relative;
+  /* top: 10%; */
+  height: 100vh;
   padding: 10px;
-  z-index: 9999;
-  
+  z-index: 9999  ;
+  backdrop-filter: blur( 7.5px );
 }
 .para-style{
   word-wrap: break-word;

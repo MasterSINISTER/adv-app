@@ -33,13 +33,13 @@ export default function Footer() {
           <div class="row">
             <ul>
               <li>Home</li>
-              <li>Services</li>
+              <li>About Us</li>
               <li>Terms and Conditions</li>
             </ul>
           </div>
 
           <div class="row">
-            RK Gupta Copyright © 2021 RK Gupta- All rights reserved
+            <label>RK Gupta Copyright © 2025 RK Gupta- All rights reserved</label>
           </div>
         </div>
       </footer>

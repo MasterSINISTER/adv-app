@@ -8,14 +8,15 @@ body{
     margin-top: 12rem;
     background:#000;
     padding:30px 0px;
-    font-family: 'Play', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
     text-align:center;
     }
     
     .footer .row{
     width:100%;
     display: inline-block;
-    margin:1% 0%;
+    margin:1% 0%;   
     padding:0.6% 0%;
     color:gray;
     font-size:1em;
@@ -28,7 +29,7 @@ body{
     }
     
     .footer .row a:hover{
-    color:#fff;
+    color:#00c3ff;
     }
     
     .footer .row ul{
@@ -43,6 +44,11 @@ body{
     .footer .row a i{
     font-size:2em;
     margin:0% 1%;
+    
+    }
+    .row label{
+        position: relative;
+        left: 2%;
     }
     
     @media (max-width:720px){
@@ -57,5 +63,20 @@ body{
     }
     .footer .row a i{
     margin:0% 3%;
+    }
+    }
+    @media screen and (max-width:480px){
+    .footer{
+    text-align:center   ;
+    padding:5%;
+    }
+    .footer .row ul li{
+    position: relative;
+    right: 10%;
+    text-align: center;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    text-align: center;
     }
     }
