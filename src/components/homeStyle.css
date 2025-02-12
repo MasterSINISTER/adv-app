@@ -310,17 +310,7 @@ min-height: 600px;
 
 }
 .tes-card img:hover{
-  transform: translateY(-20px)
-  
-}
-
-@keyframes jump{
-  from {
-    transform: translateY(-10px);
-  }
-  to{
-    transform: translateY(10px);
-  }
+  transform: translateY(-20px);
 }
 
 .tes-content{
@@ -672,7 +662,9 @@ opacity: 0.5;
     font-size: 16px;
     padding: 20px;
   }
+
 }
+
 
 /* Small Mobile Devices */
 @media screen and (max-width: 480px) {
@@ -711,16 +703,18 @@ opacity: 0.5;
   .secondSection-heading{
     font-size: 20px;
   }
-.stats-container{
-  padding-top: 50%;
-  word-wrap: break-word;
-  font-size: 1.1em;
-}
-.stack-container{
+
+.modal-content{
+  font-size: 15px;
+  width: fit-content;
   position: relative;
-  right: 40%;
-
-
+}
+.modal{
+  margin-left: 2%;
+  width: 90%;
+  height: fit-content;
+  padding: 10px;
+  
 }
 .para-style{
   word-wrap: break-word;
@@ -768,6 +762,26 @@ opacity: 0.5;
   .heading-sub{
     font-size: 15px;
   }
+  .tes-cards-container{
+    display: grid;
+    width: 100%;
+  }
+  .tes-card{
+    max-width: 65%;
+    gap: 20px;
+  }
+  .stats-container{
+  padding-top: 50vh;
+  display: grid;
+  word-wrap: break-word;
+  font-size: 1.8em;
+}
+.stack-container{
+  position: relative;
+  right: 40%;
+
+
+}
 }
 
 /* Height-based adjustments */
