@@ -171,7 +171,8 @@ border: 1px solid rgba(0, 204, 255, 0.18);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
+  background-color: black;
 }
 
 .modal-content {
@@ -205,6 +206,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: #EEEEEE;
   width: 50%;
   cursor: pointer;
+  position: relative;
+  top: 30%;
 }
 .btn-accept:hover{
   background-color: transparent;
@@ -247,7 +250,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .lawyer-img{
     width: 40%;
     height: auto;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
     /* opacity: 0; */
     right: 10%;
@@ -258,13 +261,12 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 @supports (animation-timeline: view()){
   .person-img{
+    overflow-x: hidden;
     width: 40%;
     position: relative;
     left: 5%;
     /* opacity: 0; */
     height: 10%;
-
-    overflow: hidden;
     /* animation: rightIn;
     animation-timeline: view(); */
   }
@@ -714,6 +716,7 @@ opacity: 0.5;
   backdrop-filter: blur( 7.5px );
 }
 .modal{
+  background-color: black;
   margin-left: 2%;
   width: 90%;
   position: relative;
@@ -722,6 +725,11 @@ opacity: 0.5;
   padding: 10px;
   z-index: 9999  ;
   backdrop-filter: blur( 7.5px );
+}
+.btn-accept{
+  font-size: 2vh;
+  position: relative;
+  transform: translateY(-120px);
 }
 .para-style{
   word-wrap: break-word;

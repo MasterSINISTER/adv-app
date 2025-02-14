@@ -189,8 +189,4 @@ cursor: pointer;
   .call-icon{
     display: none;
   }
-
-  .btn-accept{
-    font-size: 2vh;
-  }
 }
