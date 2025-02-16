@@ -47,10 +47,10 @@ gsap.registerPlugin(ScrollTrigger);
       scrollTrigger:{
         trigger:".lawyer-img",
         toggleActions:"play pause resume restart",
-        scrub:3,
+        scrub:2,
         // markers:true,
         },
-      x:300,
+      x:240,
       duration:2,
   
     });
@@ -58,9 +58,9 @@ gsap.registerPlugin(ScrollTrigger);
       scrollTrigger:{
         trigger:".person-img",
         toggleActions:"play pause resume restart",
-        scrub:3,
+        scrub:2,
         },
-      translateX:-300,
+      translateX:-240,
       duration:2,
       // ease:"none",
   
