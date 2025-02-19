@@ -17,7 +17,7 @@
 
 .tilted-card-mobile-alert {
   position: absolute;
-  
+
   top: 1rem;
   text-align: center;
   font-size: 0.875rem;
@@ -36,7 +36,6 @@
 .tilted-card-inner {
   position: relative;
   transform-style: preserve-3d;
-  
 }
 
 .tilted-card-img {
@@ -44,6 +43,7 @@
   top: 0;
   left: 0;
   object-fit: cover;
+
   border-radius: 15px;
   will-change: transform;
   transform: translateZ(0);
@@ -59,12 +59,12 @@
   width: 100%;
   font-family: "Urbanist", sans-serif;
   font-size: 20px;
-  background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-backdrop-filter: blur( 8px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   will-change: transform;
   transform: translateZ(30px);
 }
