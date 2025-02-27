@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./homeStyle.css";
 
 import BlurText from "./ui/BlurText/BlurText";
@@ -10,12 +10,15 @@ import Aurora from "./ui/Aurora/Aurora";
 import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
 import { gsap } from "gsap";
+import { motion, useInView } from "framer-motion";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CountUp from "react-countup";
 import { Card } from "react-bootstrap";
 import { Rating } from "@mui/material";
 function Home() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
   gsap.registerPlugin(ScrollTrigger);
   const navigate = useNavigate();
   const handleServicesScroll = () => {
@@ -55,26 +58,26 @@ function Home() {
   ];
 
   useEffect(() => {
-    gsap.to(".lawyer-img", {
-      scrollTrigger: {
-        trigger: ".lawyer-img",
-        toggleActions: "play pause resume restart",
-        scrub: 2,
-        // markers:true,
-      },
-      x: 240,
-      duration: 2,
-    });
-    gsap.to(".person-img", {
-      scrollTrigger: {
-        trigger: ".person-img",
-        toggleActions: "play pause resume restart",
-        scrub: 2,
-      },
-      translateX: -240,
-      duration: 2,
-      // ease:"none",
-    });
+    // gsap.to(".lawyer-img", {
+    //   scrollTrigger: {
+    //     trigger: ".lawyer-img",
+    //     toggleActions: "play pause resume restart",
+    //     scrub: 2,
+    //     // markers:true,
+    //   },
+    //   x: 240,
+    //   duration: 2,
+    // });
+    // gsap.to(".person-img", {
+    //   scrollTrigger: {
+    //     trigger: ".person-img",
+    //     toggleActions: "play pause resume restart",
+    //     scrub: 2,
+    //   },
+    //   translateX: -240,
+    //   duration: 2,
+    //   // ease:"none",
+    // });
     gsap.utils.toArray(".firstSection-heading").forEach((heading) => {
       gsap.to(heading, {
         scrollTrigger: {
@@ -105,15 +108,15 @@ function Home() {
       duration: 2,
     });
 
-    gsap.to(".para-style", {
-      scrollTrigger: {
-        trigger: ".para-style",
-        toggleActions: "play pause resume restart",
-        scrub: 1,
-      },
-      opacity: 1,
-      duration: 2,
-    });
+    // gsap.to(".para-style", {
+    //   scrollTrigger: {
+    //     trigger: ".para-style",
+    //     toggleActions: "play pause resume restart",
+    //     scrub: 1,
+    //   },
+    //   opacity: 1,
+    //   duration: 2,
+    // });
   }, []);
 
   const [showModal, setShowModal] = useState(false);
@@ -167,7 +170,7 @@ function Home() {
           <div className="heading-container">
             <div>
               <BlurText
-                text="RK GUPTA"
+                text="R.K. GUPTA"
                 delay={200}
                 animateBy="letter"
                 direction="top"
@@ -198,7 +201,7 @@ function Home() {
                   splitBy="characters"
                   transition={{ type: "spring", damping: 40, stiffness: 400 }}
                   rotationInterval={3500}
-                  loop={false}
+                  loop={true}
                   className="heading-switch"
                 />
               </div>
@@ -217,19 +220,32 @@ function Home() {
         <div className="firstSection-container">
           <div className="para-container">
             <div className="img-container">
-              <img
+              <motion.img
                 src="https://i.postimg.cc/266fhMyY/2330082.webp"
                 alt="lawyerImage"
                 className="lawyer-img"
+                whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+                transition={{ duration: 1, delay: 0.5 }}
+                ref={ref}
+                viewport={{ once: true }}
               />
 
-              <img
+              <motion.img
                 src="https://i.postimg.cc/pdkH9R2k/4538053.webp"
                 alt="lawyerImage"
                 className="person-img"
+                whileInView={{ x: [100, 0], opacity: [0, 1] }}
+                transition={{ duration: 1, delay: 1 }}
+                ref={ref}
+                viewport={{ once: true }}
               />
             </div>
-            <p className="para-style">
+            <motion.p
+              className="para-style"
+              whileInView={{ y: [100, 0], opacity: [0, 1] }}
+              ref={ref}
+              viewport={{ once: true }}
+            >
               {/* Advocate R. K. Gupta has been practicing and handling cases
               independently with a result oriented approach, both professionally
               and ethically . He has now acquired many years of professional
@@ -263,7 +279,7 @@ function Home() {
               <br></br>
               <br></br>
               <br></br>
-            </p>
+            </motion.p>
           </div>
         </div>
       </section>
@@ -281,7 +297,7 @@ function Home() {
           <TiltedCard
             imageSrc="https://www.shutterstock.com/image-vector/legal-advice-lawyer-during-divorce-600nw-2491887577.jpg"
             altText="FAMILY LAWS"
-            captionText="Matters Related to Marriage, Divorce, and Inheritance."
+            captionText="Marriage, divorce, alimony, restitution of conjugal rights, judicial separation, domestic violence, 498a, child custody, annulment of marriage, Muslim family law, and more."
             containerHeight="300px"
             containerWidth="300px"
             imageHeight="300px"
@@ -351,7 +367,7 @@ function Home() {
           <TiltedCard
             imageSrc="https://media.istockphoto.com/id/2136024434/vector/consumer-buying-with-legal-protection-consumer-law-protects-customer-with-insurance-concept.jpg?s=612x612&w=0&k=20&c=Bhy5wQwN_4A5cp3mueUI7h3qFKCzjRGragClIxQP-Zg="
             altText="CONSUMER PROTECTION"
-            captionText="Matters Related to Rights and Remedies for Consumers."
+            captionText="Consumer protection, consumer forum, and more."
             containerHeight="300px"
             containerWidth="300px"
             imageHeight="300px"
@@ -506,6 +522,9 @@ function Home() {
               </h3>
             </div>
           </div>
+          <button className="btn-explore" onClick={() => navigate("/feedback")}>
+            Send Feedback !
+          </button>
           {/* <div className="stack-container" data-aos="fade-in">
           <Stack
             randomRotation={true}

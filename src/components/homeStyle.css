@@ -253,7 +253,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     overflow-x: hidden;
     position: relative;
     /* opacity: 0; */
-    right: 10%;
+    right: 0%;
     /* animation: leftIn;
     animation-timeline: view(); */
   }
@@ -264,7 +264,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     overflow-x: hidden;
     width: 40%;
     position: relative;
-    left: 5%;
+    left: 0%;
     /* opacity: 0; */
     height: 10%;
     /* animation: rightIn;
@@ -546,6 +546,26 @@ opacity: 0.5;
   }
 }
 
+
+@media screen and (max-width: 1500px) {
+
+  .modal-content p {
+    font-size: 2.5vh;
+  }
+  .btn-accept{
+    position: relative;
+    top: 0px;
+    font-size: 3vh;
+    padding: 10px;
+    width: 30vh;
+  }
+  .firstSection-heading{
+    font-size: 6vh;
+  }
+  .para-style{
+    font-size: 3vh;
+  }
+}
 
 /* Tablet Devices */
 @media screen and (max-width: 1024px) {

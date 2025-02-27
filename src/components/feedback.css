@@ -1,0 +1,155 @@
+.feedback-heading {
+  color: white;
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 6vh;
+  text-align: center;
+}
+.form-container {
+  border: 3px solid white;
+  height: 77vh;
+  width: 70vh;
+  display: block;
+  margin-left: auto;
+  padding: 20px;
+  margin-right: auto;
+  margin-top: 3%;
+  border-radius: 40px;
+}
+.rating-star {
+  position: relative;
+  top: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rating-label {
+  position: relative;
+  top: 70px;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-size: 3vh;
+  text-align: center;
+  left: 20%;
+}
+.rating-container {
+  display: flex;
+  flex-direction: row;
+}
+.form-heading {
+  font-size: 3vh;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.form-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-outer input {
+  width: 50%;
+  padding: 20px;
+  background-color: transparent;
+  border-right: 10px solid white;
+  border-bottom: 10px solid grey;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 20px;
+  font-size: 2vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Urbanist", sans-serif;
+  outline: none;
+  color: white;
+  letter-spacing: 2px;
+  transition: all 0.7s ease;
+}
+.form-outer input:focus {
+  border-right: 1px solid white;
+  border-bottom: 1px solid grey;
+}
+.form-outer textarea:focus {
+  border-right: 1px solid white;
+  border-bottom: 1px solid grey;
+}
+.btn-send-feedback {
+  font-size: 3vh;
+  width: 20vh;
+  padding: 10px;
+  font-family: "Urbanist", sans-serif;
+  border-radius: 100px;
+  font-weight: 600;
+  transition: all 0.7s ease;
+  border: none;
+  top: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: transparent;
+  color: white;
+  border: 5px dotted white;
+}
+.btn-send-feedback:hover {
+  transform: translateY(-10px);
+  background-color: white;
+  color: black;
+  border: none;
+}
+.form-outer textarea {
+  width: 80%;
+  padding: 20px;
+  background-color: transparent;
+  border-right: 10px solid white;
+  border-bottom: 10px solid grey;
+  color: white;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 20px;
+  font-size: 2vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Urbanist", sans-serif;
+  outline: none;
+  letter-spacing: 2px;
+  transition: all 0.7s ease;
+}
+
+@media (max-width: 768px) {
+  .feedback-heading {
+    font-size: 4vh;
+    position: relative;
+    top: 70px;
+  }
+  .form-container {
+    width: 90%;
+    height: 70vh;
+    padding: 15px;
+    position: relative;
+    top: 100px;
+    right: 25px;
+  }
+  .form-heading {
+    font-size: 2.5vh;
+  }
+  .form-outer input,
+  .form-outer textarea {
+    width: 80%;
+    font-size: 1.8vh;
+    padding: 15px;
+  }
+  .btn-send-feedback {
+    font-size: 2.5vh;
+    width: 50%;
+    padding: 8px;
+  }
+  .main-container {
+    margin-top: 10%;
+  }
+  .rating-label{
+    left: 10%;
+  }
+}
