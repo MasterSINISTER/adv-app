@@ -37,7 +37,7 @@ function Appoitment() {
       ></ArrowBackIosIcon>
       <h1 className="appoitment-heading">BOOK A MEET !</h1>
       <div className="form-container">
-        <form className="form" action="https://formsubmit.co/hellolucifer007@gmail.com" method="POST">
+        <form className="form" action="https://formsubmit.co/advocaterajgupta@gmail.com" method="POST">
           <p className="title">Fill up your Details </p>
 
           <label>
@@ -61,7 +61,7 @@ function Appoitment() {
             <span>Message</span>
           </label>
           <button className="submit" type="submit">Submit</button>
-          <input type="hidden" name="_next" value="http://localhost:3000/thank-you"></input>
+          <input type="hidden" name="_next" value="https://advocaterkgupta.in/thank-you"></input>
           <input type="hidden" name="_autoresponse" value="Thank You We will respond you back"></input>
         </form>
       </div>

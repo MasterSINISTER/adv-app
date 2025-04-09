@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./homeStyle.css";
-
 import BlurText from "./ui/BlurText/BlurText";
-import Stack from "./ui/Stack/Stack";
 import Footer from "./Footer";
 import TiltedCard from "./ui/TiltedCard/TiltedCard";
 import RotatingText from "./ui/RotatingText/RotatingText";
@@ -11,13 +9,12 @@ import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
 import { gsap } from "gsap";
 import { motion, useInView } from "framer-motion";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CountUp from "react-countup";
-import { Card } from "react-bootstrap";
 import { Rating } from "@mui/material";
 function Home() {
   const ref = useRef(null);
+  // eslint-disable-next-line
   const inView = useInView(ref, { once: true });
   gsap.registerPlugin(ScrollTrigger);
   const navigate = useNavigate();
@@ -34,28 +31,7 @@ function Home() {
       behavior: "smooth",
     });
   };
-  const getToStart = () => {
-    navigate("/contact");
-  };
 
-  const images = [
-    {
-      id: 1,
-      img: "https://i.postimg.cc/K8wyNpyG/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
-    },
-    {
-      id: 2,
-      img: "https://i.postimg.cc/XqjMJT98/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
-    },
-    {
-      id: 3,
-      img: "https://i.postimg.cc/jqc09Srk/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
-    },
-    {
-      id: 4,
-      img: "https://i.postimg.cc/8cP3DLVX/I-couldn-t-be-happier-with-the-service-I-received-from-Mr-R-K-Gupta-and-delivered-exactly-what-I-was.png",
-    },
-  ];
 
   useEffect(() => {
     // gsap.to(".lawyer-img", {
@@ -522,9 +498,11 @@ function Home() {
               </h3>
             </div>
           </div>
+          <div className="feedback-div">
           <button className="btn-explore" onClick={() => navigate("/feedback")}>
             Send Feedback !
           </button>
+          </div>
           {/* <div className="stack-container" data-aos="fade-in">
           <Stack
             randomRotation={true}

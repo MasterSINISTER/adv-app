@@ -30,13 +30,13 @@ function Feedback() {
           FEEDBACK !
         </motion.h1>
         <motion.div
-          className="form-container"
+          className="form-feedback-container"
           initial={{ opacity: 0 }}
           animate={{ x: ["0px", "20px"], opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
         >
           <form
-            action="https://formsubmit.co/hellolucifer007@gmail.com"
+            action="https://formsubmit.co/advocaterajgupta@gmail.com"
             method="POST"
             className="form-outer"
           >
@@ -44,7 +44,7 @@ function Feedback() {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:3000/"
+              value="https://advocaterkgupta.in/thank-you"
             ></input>
             <input
               type="text"

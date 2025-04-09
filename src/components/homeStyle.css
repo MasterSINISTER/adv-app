@@ -692,7 +692,7 @@ opacity: 0.5;
 /* Small Mobile Devices */
 @media screen and (max-width: 480px) {
   .heading {
-    font-size: 30px;
+    font-size: 2.9vh;
     padding: 10px;
   }
   .top-div{
@@ -728,7 +728,7 @@ opacity: 0.5;
   }
 
 .modal-content{
-  font-size: 15px;
+  font-size: 105%;
   width: fit-content;
   position: relative;
   z-index: 9999;
@@ -736,13 +736,17 @@ opacity: 0.5;
   left: 3%;
   backdrop-filter: blur( 7.5px );
 }
+.modal-content p{
+  font-size: 2vh;
+}
 .modal{
   background-color: black;
-  margin-left: 2%;
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
   position: relative;
-  /* top: 10%; */
-  height: 100vh;
+  top: -130px;
+  height: 130vh;
   padding: 10px;
   z-index: 9999  ;
   backdrop-filter: blur( 7.5px );
@@ -750,7 +754,17 @@ opacity: 0.5;
 .btn-accept{
   font-size: 2vh;
   position: relative;
+  top: 130px;
   transform: translateY(-120px);
+}
+.feedback-div{
+  padding: 30px;
+  position: relative;
+  top: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center
 }
 .para-style{
   word-wrap: break-word;
@@ -764,8 +778,10 @@ opacity: 0.5;
   font-size: 18px;
 }
   .sub-heading {
-    font-size: 18px;
+    font-size: 2vh;
+    word-break: keep-all;
     padding: 10px;
+    transition: all 1s ease;
     animation: none;
     position: relative;
     right: 15%;
@@ -778,8 +794,9 @@ opacity: 0.5;
     right: 15%;
 }
 .btn-explore{
-  font-size: 20px;
+  font-size:2vh;
   animation: none;
+  width: 20vh;
 }
   .para-style {
     font-size: 14px;
@@ -796,7 +813,7 @@ opacity: 0.5;
     padding: 10px;
   }
   .heading-sub{
-    font-size: 15px;
+    font-size: 2vh;
   }
   .tes-cards-container{
     display: grid;

@@ -12,9 +12,11 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
   align-items: baseline;
   width: 30%;
-  margin-left: 32%;
+  /* margin-left: 5%; */
   padding: 50px;
   font-size: 20px;
   border-radius: 20px;
@@ -130,7 +132,7 @@ textarea {
   width: 20%;
   display: block;
   margin-right: auto;
-  transform: .3s ease;
+  transform: 0.3s ease;
   background-color: #ffffff;
 }
 
@@ -204,7 +206,6 @@ textarea {
   right: 10px;
 }
 
-
 /* Loader Styles */
 .loader-container {
   position: fixed;
@@ -229,32 +230,35 @@ textarea {
 
 /* Animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 
 @keyframes pulse {
   from {
-      transform: scale(0.9);
-      opacity: 1;
+    transform: scale(0.9);
+    opacity: 1;
   }
 
   to {
-      transform: scale(1.8);
-      opacity: 0;
+    transform: scale(1.8);
+    opacity: 0;
   }
 }
 
 @keyframes rigtIn {
   from {
-      opacity: 0;
-      transform: translateX(-200px);
+    opacity: 0;
+    transform: translateX(-200px);
   }
 
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -263,93 +267,110 @@ textarea {
 /* For tablets and smaller desktops */
 @media (max-width: 1024px) {
   .form {
-      width: 50%;
-      margin-left: 25%;
+    width: 50%;
+    margin-left: 25%;
   }
 
   .reachout-content {
-      flex-direction: column;
-      gap: 10%;
+    flex-direction: column;
+    gap: 10%;
   }
 
   .map-content {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .btn-whatsapp {
-      top: 10vh;
-      left: 5vh;
+    top: 10vh;
+    left: 5vh;
   }
 }
 
 /* For tablets */
 @media (max-width: 768px) {
   .appoitment-heading {
-      font-size: 40px;
+    font-size: 40px;
   }
 
   .form {
-      width: 70%;
-      margin-left: 15%;
-      padding: 30px;
+    width: 70%;
+    margin-left: 15%;
+    padding: 30px;
   }
 
   .contact-details {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .btn-whatsapp {
-      font-size: 20px;
-      padding: 15px;
+    font-size: 20px;
+    padding: 15px;
   }
 }
 
 /* For mobile devices */
 @media (max-width: 480px) {
+  * {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .appoitment-heading {
-      font-size: 25px;
-      position: relative;
-      right: 10%;
-      word-wrap: break-word;
+    font-size: 25px;
+    position: relative;
+    top: 80px;
+    padding: 20px;
+    /* right: 10%; */
+    word-wrap: break-word;
   }
 
   .form {
-      width: 60%;
-      margin-left: 5%;
-      padding: 20px;
+    width: 80%;
+    margin-left: 5%;
+    padding: 20px;
   }
 
   .title {
-      font-size: 24px;
-      word-wrap: break-word;
-      white-space: normal;
+    font-size: 24px;
+    word-wrap: break-word;
+    white-space: normal;
   }
 
   .contact-details {
-      font-size: 20px;
+    font-size: 20px;
   }
   .form label .input {
-  width: fit-content;
-}
+    width: fit-content;
+  }
 
-.btn-whatsapp {
-      font-size: 18px;
-      padding: 10px;
-      top: 1vh;
-      left: 2vh;
+  .btn-whatsapp {
+    font-size: 18px;
+    padding: 10px;
+    position: relative;
+    top: 20px;
   }
-textarea{
-  width: 40%;
-}
+  textarea {
+    width: 40%;
+  }
   .submit {
-      width: 70%;
-      left: 15%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .map-container{
-    width:80%;
+  .map-container {
+    width: 80%;
     height: auto;
     position: relative;
-    left: 10px;
+    /* left: 10px; */
+    padding: 20px;
+  }
+  .reachout-container {
+    padding: 10px;
+    position: relative;
+    top: 20px;
+  }
+  .form-container {
+    border: none;
   }
 }
