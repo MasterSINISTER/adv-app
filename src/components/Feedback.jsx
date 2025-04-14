@@ -44,7 +44,7 @@ function Feedback() {
             <input
               type="hidden"
               name="_next"
-              value="https://advocaterkgupta.in/thank-you"
+              value="https://advocaterkgupta.in"
             ></input>
             <input
               type="text"
