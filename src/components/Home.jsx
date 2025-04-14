@@ -166,7 +166,7 @@ function Home() {
               >
                 <h1 className="sub-heading">We Help You with </h1>
                 <RotatingText
-                  texts={["Legal Matters", "Disputes", "Claims", "Justice!"]}
+                  texts={["Disputes", "Claims", "Justice"]}
                   mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                   staggerFrom={"last"}
                   initial={{ y: "100%", opacity: 0 }}
@@ -503,16 +503,6 @@ function Home() {
             Send Feedback !
           </button>
           </div>
-          {/* <div className="stack-container" data-aos="fade-in">
-          <Stack
-            randomRotation={true}
-            sensitivity={180}
-            sendToBackOnClick={false}
-            cardDimensions={{ width: 200, height: 200 }}
-            cardsData={images}
-          />
-         
-          </div> */}
           <div className="stats-container" data-aos="fade-in">
             <div>
               <CountUp

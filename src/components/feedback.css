@@ -153,3 +153,47 @@
     left: 10%;
   }
 }
+@media (max-width: 480px) {
+  .feedback-heading {
+    font-size: 3.5vh;
+    top: 60px;
+    left: 20px;
+  }
+  .form-feedback-container {
+    width: 85vw;
+    height: auto;
+    min-height: 60vh;
+    padding: 15px;
+    margin-top: 30%;
+    border-radius: 30px;
+  }
+  .form-heading {
+    font-size: 2vh;
+  }
+  .form-outer input,
+  .form-outer textarea {
+    width: 90%;
+    font-size: 1.6vh;
+    padding: 12px;
+    border-right: 5px solid white;
+    border-bottom: 5px solid grey;
+  }
+  .btn-send-feedback {
+    font-size: 2vh;
+    width: 60%;
+    padding: 8px;
+    top: 60px;
+  }
+  .rating-star {
+    top: 50px;
+    transform: scale(0.8);
+  }
+  .rating-label {
+    font-size: 2.5vh;
+    top: 50px;
+    left: 5%;
+  }
+  .form-outer {
+    gap: 15px;
+  }
+}
